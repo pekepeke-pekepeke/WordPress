@@ -5,6 +5,7 @@
 1.	テンプレートタグ記述場所の把握
 2.	タグの概要把握
 ##トップページ
+<div style="background-color: #d0f0c0; padding: 10px;">
 1.header.php
 テンプレートタグ	説明
 <?php wp_nav_menu(); ?>	登録済みのナビゲーションメニューを出力
@@ -17,7 +18,9 @@
 <?php get_home_url(); ?>	ホームURLを取得
 <?php language_attributes(); ?>	HTMLタグの lang 属性を追加
 この他にもheader.php に組み込めるテンプレートタグはありますが、どのような情報を表示し
-2.index.php
+</div>
+<div style="background-color: #add8e6; padding: 10px;">
+  2.index.php
 テンプレートタグ	説明
 基本情報
 <?php get_header(); ?>	ヘッダーを読み込む
@@ -69,6 +72,8 @@
 <?php is_single(); ?>	シングル投稿ページか判定
 <?php is_page(); ?>	固定ページか判定
 <?php is_category(); ?>	カテゴリページか判定
+  </div>
+  <div style="background-color: #ffcc99; padding: 10px;">
 3.footer.php
 テンプレートタグ	説明	使用例
 wp_footer()	プラグインやテーマのスクリプトを適切に読み込む	<?php wp_footer(); ?>
@@ -81,3 +86,4 @@ date('Y')	現在の年を取得	&copy; <?php echo date('Y'); ?>
 is_active_sidebar('footer-1')	ウィジェットエリアが有効か判定	<?php if (is_active_sidebar('footer-1')) { dynamic_sidebar('footer-1'); } ?>
 register_sidebar()	フッター用のウィジェットエリアを登録	register_sidebar(array(...));
 register_nav_menu()	フッターナビゲーションを登録	register_nav_menu('footer-menu', 'Footer Menu');
+</div>
